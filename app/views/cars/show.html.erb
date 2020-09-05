@@ -1,20 +1,25 @@
 <div class="container mt-5">
-  <div class="card mb-3">
+  <div class="show-card mb-3">
     <% if @car.photo.attached? %>
-      <%= cl_image_tag @car.photo.key, class: "img-size" %>
+      <%= cl_image_tag @car.photo.key, class: "card-banner" %>
     <% end %>
     <div class="card-body">
-      <h5 class="card-title"><%= @car.title %></h5>
-      <h5 class="card-year"><%= @car.year %></h5>
-      <h5 class="card-price"><%= @car.price %></h5>
-      <h5 class="card-user"><%= @car.user.email %></h5>
+      <h2><strong><%= @car.title %></strong></h2>
+      <h5><%= @car.year %></h5>
+      <h5><strong>Price: </strong><%= @car.price %> $/day</h5>
+      <h5><strong>Contact: </strong><%= @car.user.email %></h5>
+      <h5><strong>Description: </strong></h5>
       <p class="card-text"><%= @car.description %></p>
     </div>
   </div>
   <%= simple_form_for [@car, @booking] do |f| %>
+  <div class="form-inputs">
     <%= f.input  :start_date%>
     <%= f.input :end_date %>
+  </div>
+  <div class="form-actions">
     <%= f.submit class: 'btn btn-primary' %>
+  </div>
   <% end %>
 </div>
 
