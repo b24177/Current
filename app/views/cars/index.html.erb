@@ -3,7 +3,7 @@
 <% @cars.each do |car| %>
   <div class="card" style="width: 18rem;">
     <% if element.photo.attached? %>
-      <img class="card-img-top" salt="Card image cap"><%= cl_image_tag element.photo.key %></img>
+      <%= cl_image_tag element.photo.key, class="card-img-top" %>
     <% end %>
     <div class="card-body">
       <h5 class="card-title"><%= @cars.title %></h5>
@@ -11,6 +11,6 @@
       <h5 class="card-title"><%= @cars.price %></h5>
       <p class="card-text"><%= @cars.description %></p>
       <div class="text-center">
-        <button type="button" class="btn btn-primary">View More</button></div>
+        <%= link_to "View More", class: "btn btn-primary" %>
     <% end %>
   </div>
