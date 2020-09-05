@@ -2,7 +2,8 @@
 
 <div class="d-flex flex-row flex-wrap">
   <% @cars.each do |car| %>
-    <div class="card col-3">
+  <div class="col-3">
+    <div class="card">
       <% if car.photo.attached? %>
         <%= cl_image_tag car.photo.key, class: "card-img-top" %>
       <% end %>
@@ -15,5 +16,6 @@
         </div>
       </div>
     </div>
+  </div>
   <% end %>
 </div>
