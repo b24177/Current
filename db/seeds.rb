@@ -61,7 +61,7 @@ create_car('tech geek but also a family man','Model X', 'Tesla', 2020, 100, user
 create_car('your best choice if you don\'t like Tesla','e-tron', 'Audi', 2020, 100, user1, 'app/assets/images/e-tron.jpg', 'e-tron.jpg')
 create_car('you like living in the fast lane','Taycan', 'Porsche', 2020, 100, user2, 'app/assets/images/taycan.jpg', 'taycan.jpg')
 create_car('tech geeks first choice','Model 3', 'Tesla', 2020, 100, user3, 'app/assets/images/model3.jpg', 'model3.jpg')
-create_car('became the first electric car to top the monthly new-car-sales ranking in any country in 2013','Model S', 'Tesla', 2020, 100, user2, 'app/assets/images/modelX.jpg', 'modelS.jpg')
+create_car('became the first electric car to top the monthly new-car-sales ranking in any country in 2013','Model S', 'Tesla', 2020, 100, user2, 'app/assets/images/modelS.jpg', 'modelS.jpg')
 create_car('basically an e-Golf but bigger','ID.3', 'Volkswagen', 2020, 100, user1, 'app/assets/images/ID3.jpg', 'ID3.jpg')
 create_car('sees right through your soul','e', 'Honda', 2020, 100, user2, 'app/assets/images/honda-e.jpg', 'honda-e.jpg')
 create_car('best selling EV in Europe according to Renault','Zoe', 'Renault', 2020, 100, user3, 'app/assets/images/zoe.jpg', 'zoe.jpg')
