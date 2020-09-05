@@ -1,0 +1,12 @@
+<div class="text-center">
+  <h1>Booking Confirmed</h1>
+<p>Thank you for using Current.com</p>
+
+<ul>
+  <%= @booking.car.title %>
+  <%= @booking.car.year %>
+  <%= @booking.car.price %>
+</ul>
+
+<%= link_to "Book another car", cars_path %>
+</div>
