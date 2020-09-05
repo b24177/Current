@@ -3,7 +3,7 @@
 <% @cars.each do |car| %>
   <div class="card" style="width: 18rem;">
     <% if element.photo.attached? %>
-      <%= cl_image_tag element.photo.key, class="card-img-top" %>
+      <%= cl_image_tag element.photo.key, class: "card-img-top" %>
     <% end %>
     <div class="card-body">
       <h5 class="card-title"><%= @cars.title %></h5>
