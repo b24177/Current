@@ -1,16 +1,20 @@
-
+<div class="container mt-5">
   <div class="card mb-3">
-   <% if @car.photo.attached? %>
-    <%= cl_image_tag @car.photo.key, class="card-img-top" %>
+    <% if @car.photo.attached? %>
+      <%= cl_image_tag @car.photo.key, class: "img-size" %>
     <% end %>
     <div class="card-body">
-    <h5 class="card-title"><%= @car.title %></h5>
-    <h5 class="card-year"><%= @car.year %></h5>
-    <h5 class="card-price"><%= @car.price %></h5>
-    <h5 class="card-user"><%= @car.user %></h5>
-    <p class="card-text"><%= @car.description %></p>
+      <h5 class="card-title"><%= @car.title %></h5>
+      <h5 class="card-year"><%= @car.year %></h5>
+      <h5 class="card-price"><%= @car.price %></h5>
+      <h5 class="card-user"><%= @car.user.email %></h5>
+      <p class="card-text"><%= @car.description %></p>
+    </div>
   </div>
-  <div class="text-center">
-   <%=link_to "BOOK NOW", class: "btn btn-primary"> %>
-  </div>
+  <%= simple_form_for [@car, @booking] do |f| %>
+    <%= f.input  :start_date%>
+    <%= f.input :end_date %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>
 
