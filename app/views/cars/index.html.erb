@@ -2,13 +2,13 @@
 
 <% @cars.each do |car| %>
   <div class="card" style="width: 18rem;">
-    <% if element.photo.attached? %>
-      <%= cl_image_tag element.photo.key, class: "card-img-top" %>
+    <% if car.photo.attached? %>
+      <%= cl_image_tag car.photo.key, class: "card-img-top" %>
     <% end %>
     <div class="card-body">
-      <h5 class="card-title"><%= @cars.title %></h5>
-      <h5 class="card-title"><%= @cars.year %></h5>
-      <h5 class="card-title"><%= @cars.price %></h5>
+      <h5 class="card-title"><%= car.title %></h5>
+      <h5 class="card-title"><%= car.year %></h5>
+      <h5 class="card-title"><%= car.price %></h5>
       <div class="text-center">
         <%= link_to "View More", class: "btn btn-primary" %>
     <% end %>
