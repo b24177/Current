@@ -16,12 +16,12 @@ puts "Generating new users and cars"
 puts 'Creating users...'
 
 user1 = User.create!({
-  email: '@gmail.com',
+  email: 'itsMeMario@gmail.com',
   password: 'password',
   password_confirmation: 'password'
 })
 user2 = User.create!({
-  email: 'mr@yahoo.com',
+  email: 'iLikeCars@yahoo.com',
   password: 'length_is_the_most_important_thing_when_choosing_a_password',
   password_confirmation: 'length_is_the_most_important_thing_when_choosing_a_password'
 })
@@ -44,7 +44,7 @@ def create_car(description, model, brand, year, user)
     year: year,
     user: user,
   })
-  # car.photo.attach(io: file, filename: '', content_type: 'image/png')
+  # car.photo.attach(io: File.open('path/to/file'), filename: '', content_type: 'image/png')
   car.save
 end
 
@@ -61,7 +61,7 @@ create_car('your best choice if you don\'t like Tesla','e-tron', 'Audi', 2020, u
 create_car('you like living in the fast lane','Taycan', 'Porsche', 2020, user2)
 create_car('tech geeks first choice','Model 3', 'Tesla', 2020, user3)
 create_car('became the first electric car to top the monthly new-car-sales ranking in any country in 2013','Model S', 'Tesla', 2020, user2)
-create_car('basically a Golf but bigger','ID.3', 'Volkswagen', 2020, user1)
+create_car('basically an e-Golf but bigger','ID.3', 'Volkswagen', 2020, user1)
 create_car('sees right through your soul','e', 'Honda', 2020, user2)
 create_car('best selling EV in Europe according to Renault','Zoe', 'Renault', 2020, user3)
 create_car('a small EV perfect for city driving','e-Up', 'Volkswagen', 2020, user1)
