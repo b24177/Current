@@ -5,8 +5,17 @@ class BookingsController < ApplicationController
 def create
     @booking = Booking.new(booking_params.merge(car_id: params[:car_id]))
     @booking.user = current_user
-    @booking.save
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render "cars/show"
+    end
 end
+
+def show
+    @booking = Booking.find(params[:id])
+  end
+
 
 private
   def booking_params
