@@ -1,1 +1,4 @@
 <h2>My bookings</h2>
+<% @bookings.each do |booking| %>
+  <%= booking.car.title %>
+<% end %>
