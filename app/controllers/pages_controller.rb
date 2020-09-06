@@ -7,6 +7,5 @@ class PagesController < ApplicationController
 
     @bookings = @user.bookings
     @cars = @user.cars
-    @car_bookings = @user.cars.bookings
   end
 end
