@@ -1,4 +1,8 @@
-<h2>My cars</h2>
-<% @cars.each do |car| %>
-  <%= car.title %>
-<% end %>
+<div class="card">
+  <div class="card-body">
+  <h2>My Cars</h2>
+  <% @cars.each do |car| %>
+    <li style="list-style-type:none"> <strong><%= car.title %></strong> <%= link_to "View listing", car_path(car) %></li>
+  <% end %>
+  </div>
+</div>

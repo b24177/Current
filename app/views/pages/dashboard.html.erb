@@ -1,15 +1,15 @@
 <div class="container">
   <h1>Current</h1>
   <% if @user %>
-  <div class="row">
+  <div class="flex-row">
     <div class="col-3">
       <%= render 'shared/bookings' %>
     </div>
     <div class="col-3">
-      <%= render 'shared/cars' %>
+      <%= render 'shared/carsBookings' %>
     </div>
     <div class="col-3">
-      <%= render 'shared/carsBookings' %>
+      <%= render 'shared/cars' %>
     </div>
   </div>
   <% else %>
