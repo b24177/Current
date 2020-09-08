@@ -1,2 +1,12 @@
-<h2>My car bookings</h2>
+<div class="card">
+  <div class="card-body">
+<h2>My Car Bookings</h2>
+<% @cars.each do |car| %>
+  <% car.bookings.each do |booking| %>
+    <strong><%= booking.car.title %></strong>
+    <p>Booked for: <%= booking.start_date %> - <%= booking.end_date %> </p>
+  <% end %>
+<% end %>
+  </div>
+</div>
 

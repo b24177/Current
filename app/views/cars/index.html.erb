@@ -1,16 +1,18 @@
-<h1>Cars</h1>
+<div class="text-center mt-3">
+  <h1>Cars</h1>
+</div>
 
 <div class="d-flex flex-row flex-wrap">
   <% @cars.each do |car| %>
-  <div class="col-3">
+  <div class="col-4">
     <div class="card">
       <% if car.photo.attached? %>
         <%= cl_image_tag car.photo.key, class: "card-img-top" %>
       <% end %>
       <div class="card-body">
-        <h5 class="card-title"><%= car.title %></h5>
-        <h5 class="card-title"><%= car.year %></h5>
-        <h5 class="card-title"><%= car.price %></h5>
+        <p><strong><%= car.title %></strong></p>
+        <p>Year: <%= car.year %></p>
+        <p>Price: $<%= car.price %>/day</p>
         <div class="text-center">
           <%= link_to "View More", car_path(car), class: "btn btn-primary" %>
         </div>
