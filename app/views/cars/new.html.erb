@@ -1,15 +1,19 @@
 <div class="container">
-  <h1 class="text-center">List car</h1>
-  <%= simple_form_for @car do |f| %>
-  <%= f.input :brand %>
-  <%= f.input :model %>
-  <%= f.input :year %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <div class="text-center">
-    <%= f.submit class: 'btn btn-primary' %>
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h2 class="text-center">List Car</h2>
+        <%= simple_form_for @car do |f| %>
+          <%= f.input :brand %>
+          <%= f.input :model %>
+          <%= f.input :year %>
+          <%= f.input :price %>
+          <%= f.input :description %>
+          <%= f.input :photo, as: :file %>
+      <div class="text-center">
+      <%= f.submit class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    </div>
   </div>
-  <% end %>
 </div>
 
