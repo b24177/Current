@@ -1,5 +1,4 @@
 <div class="container-fluid text-center">
-  <h1>Current</h1>
   <% if @user %>
   <div class="row">
     <div class="col-12 col-lg-4 text-left">
@@ -13,6 +12,10 @@
     </div>
   </div>
   <% else %>
-    <p>Please <%= link_to 'log in', new_user_session_path %> to view your bookings and cars</p>
-  <% end %>
 </div>
+      <%= render 'shared/logout' %>
+  <% end %>
+
+
+
+
