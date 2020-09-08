@@ -1,6 +1,6 @@
+
 <div class="container">
-  <h1>Current</h1>
-  <% if @user %>
+ <% if @user %>
   <div class="row">
     <div class="col-3">
       <%= render 'shared/bookings' %>
@@ -13,6 +13,10 @@
     </div>
   </div>
   <% else %>
-    <p>Please <%= link_to 'log in', new_user_session_path %> to view your bookings and cars</p>
-  <% end %>
 </div>
+      <%= render 'shared/logout' %>
+  <% end %>
+
+
+
+
