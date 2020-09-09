@@ -1,16 +1,12 @@
-<div class="text-center">
-  <h1>Booking Confirmed</h1>
-<p>Thank you for using Current.com</p>
-
-<ul>
-  <%= @booking.car.title %>
-  <%= @booking.car.year %>
-  <%= @booking.car.price %>
-</ul>
-
-<%= link_to "Book another car", cars_path %>
-
-<h6>Designed with the help of Max Brosnahan</h6>
+<div class=" card mx-auto text-center">
+  <div class="card-body">
+    <h5 class="card-title">Booking Confirmed! Thank you for using Current.</h5>
+    <p class="card-text">Here is a summary of your booking:</p>
+      <ul>
+        <li style="list-style-type:none">Car: <%= @booking.car.title %></li>
+        <li style="list-style-type:none">Booked for: <%= @booking.start_date %> - <%= @booking.end_date %></li>
+        <li style="list-style-type:none">Price: $<%= @booking.car.price %>/day</li>
+      </ul>
+    <%= link_to 'Book Another Car', cars_path, :class => "btn btn-primary" %>
+  </div>
 </div>
-
-
