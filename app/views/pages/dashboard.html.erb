@@ -1,13 +1,13 @@
-<div class="container-fluid text-center">
+<div class="container-fluid mt-3">
   <% if @user %>
-  <div class="row">
-    <div class="col-12 col-lg-4 text-left">
+  <div class="card d-flex flex-row justify-content-between" style="width: 100%;">
+    <div class="card-body col-4">
       <%= render 'shared/bookings' %>
     </div>
-    <div class="col-12 col-lg-4 text-left">
+    <div class="card-body col-4">
       <%= render 'shared/carsBookings' %>
     </div>
-    <div class="col-12 col-lg-4 text-left">
+    <div class="card-body col-4">
       <%= render 'shared/cars' %>
     </div>
   </div>
@@ -15,7 +15,3 @@
 </div>
       <%= render 'shared/logout' %>
   <% end %>
-
-
-
-
