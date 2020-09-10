@@ -6,12 +6,11 @@
   </div>
   <div class="card w-100 mx-auto d-flex flex-row justify-content-between">
     <div class="card-body">
-      <h2><strong><%= @car.title %></strong></h2>
-      <h5><strong>Year: </strong><%= @car.year %></h5>
-      <h5><strong>Price: </strong>$<%= @car.price %>/day</h5>
-      <h5><strong>Contact: </strong><%= @car.user.email %></h5>
-      <h5><strong>Description: </strong></h5>
-      <p class="card-text"><%= @car.description %></p>
+      <h3 class="card-title"><strong><%= @car.title %> </strong></h3>
+      <p class="card-text"><strong>Year: </strong><%= @car.year %></p>
+      <p class="card-text"><strong>Price: </strong>$<%= @car.price %>/day</p>
+      <p class="card-text"><strong>Contact: </strong><%= @car.user.email %></h5>
+      <p class="card-text"><strong>Description: </strong><%= @car.description %></p>
     </div>
     <div class="card-body">
       <h5 class="card-title text-center">Book Car</h5>
