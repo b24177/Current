@@ -8,6 +8,7 @@
 
 puts "Deleting previous records of users and cars"
 
+Booking.delete_all
 Car.delete_all
 User.delete_all
 
@@ -22,8 +23,8 @@ user1 = User.create!({
 })
 user2 = User.create!({
   email: 'iLikeCars@yahoo.com',
-  password: '1234',
-  password_confirmation: '1234'
+  password: 'password',
+  password_confirmation: 'password'
 })
 user3 = User.create!({
   email: 'anonymous@outlook.com',
@@ -37,7 +38,7 @@ puts 'creating cars...'
 
 def attach_photos(car, images = [])
   images.each do |image|
-    car.photo.attach(io: File.open(image), filename: image , content_type: 'image/jpg')
+    car.photos.attach(io: File.open(image), filename: image , content_type: 'image/jpg')
   end
 end
 
@@ -55,7 +56,6 @@ def create_car(attributes = {})
     })
   attach_photos(car, images)
   car.save
-  p car
 end
 
 create_car(description: 'the first fully electric compact SUV in Europe', model: 'Kona Electric', brand: 'Hyundai', year:  2020, price:  100, user:  user1, folder: 'app/assets/images/kona', range: 484)

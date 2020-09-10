@@ -1,7 +1,7 @@
 <div class="container mt-3">
   <div class="show-card">
-    <% if @car.photo.attached? %>
-      <%= cl_image_tag @car.photo.key, class: "card-banner w-100" %>
+    <% if @car.photos.attached? %>
+      <%= cl_image_tag @car.photos.first.key, class: "card-banner w-100" %>
     <% end %>
   </div>
   <div class="card w-100 mx-auto d-flex flex-row justify-content-between">
