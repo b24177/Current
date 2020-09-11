@@ -2,7 +2,6 @@
 
 <div class="d-flex flex-wrap justify-content-between">
   <% @cars.each do |car| %>
-  <div class="col-4">
     <div class="card card-index">
       <% if car.photos.attached? %>
         <%= cl_image_tag car.photos.first.key, class: "card-img-top" %>
