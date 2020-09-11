@@ -1,8 +1,8 @@
 <div class="card">
   <div class="card-body">
   <h2>My Bookings</h2>
-  <% @bookings.each do |booking| %>
-    <strong><%= booking.car.title %></strong> <%= link_to "View booking", booking_path(booking) %>
+  <% @bookings.reverse.each do |booking| %>
+    <strong><%= booking.car.title %></strong> <%= link_to "View car", car_path(booking.car) %>
     <p>Booked for: <%= booking.start_date %> - <%= booking.end_date %> </p>
   <% end %>
   </div>
