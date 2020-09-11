@@ -1,7 +1,31 @@
 <div class="container mt-3">
   <div class="show-card">
     <% if @car.photos.attached? %>
-      <%= cl_image_tag @car.photos.first.key, class: "card-banner w-100" %>
+      <div id="Mycarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+           <% @car.photos.each_with_index do |photo, n| %>
+             <li data-target='#MyCarousel' data-slide-to="#{n}" class="#{'active' if n == 0}"></li>
+          <% end %>
+        </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <%= cl_image_tag @car.photos.first.key, class: 'd-block w-100' %>
+        </div>
+          <% @car.photos.drop(1).each do |photo| %>
+        <div class="carousel-item">
+          <%= cl_image_tag photo.key, class: 'd-block w-100' %>
+        </div>
+        <% end %>
+        </div>
+         <a class="carousel-control-prev" href="#Mycarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#Mycarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     <% end %>
   </div>
   <div class="card w-100 mx-auto d-flex flex-row justify-content-between">
@@ -19,10 +43,10 @@
             <%= f.input  :start_date%>
             <%= f.input :end_date %>
         </div>
-    <div class="form-actions text-center">
-        <%= f.submit class: "btn btn-primary" %>
-    </div>
-    <% end %>
+        <div class="form-actions text-center">
+            <%= f.submit class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
