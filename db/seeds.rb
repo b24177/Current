@@ -32,6 +32,8 @@ user3 = User.create!({
   password_confirmation: 'something'
 })
 
+addresses = ['Dyegata 43, Sande 3070', 'Scweigaards gate 34, Oslo 0191', 'Langgaten 7, Holmestrand 3080', 'Frode Rinnans veg 2, Trondheim 7050']
+
 puts 'users created'
 
 puts 'creating cars...'
@@ -52,19 +54,21 @@ def create_car(attributes = {})
       year: attributes[:year],
       price: attributes[:price],
       range: attributes[:range],
+      address: attributes[:address],
       user: attributes[:user]
     })
   attach_photos(car, images)
   car.save
 end
 
-create_car(description: 'the first fully electric compact SUV in Europe', model: 'Kona Electric', brand: 'Hyundai', year:  2020, price:  100, user:  user1, folder: 'app/assets/images/kona', range: 484)
-create_car(description: 'basically made of plastic', model: 'i3', brand: 'BMW', year: 2020, price: 100, user: user1, folder: 'app/assets/images/i3', range: 130)
-create_car(description: 'actually a hybrid', model: 'i8', brand: 'BMW', year: 2020, price: 100, user: user3, folder: 'app/assets/images/i8', range: 37)
-create_car(description: 'the first electric car from Jaguar', model: 'I-Pace', brand: 'Jaguar', year: 2020, price: 100, user: user2, folder: 'app/assets/images/i-pace', range: 430)
-create_car(description: 'tech geek but also a family man', model: 'Model X', brand: 'Tesla', year: 2020, price: 175, user: user3, folder: 'app/assets/images/model x', range: 497)
-create_car(description: 'you like living in the fast lane', model: 'Taycan', brand: 'Porsche', year: 2020, price: 250, user: user2, folder: 'app/assets/images/taycan', range: 400)
-create_car(description: 'tech geeks first choice', model: 'Model 3', brand: 'Tesla', year: 2020, price: 150, user: user3, folder: 'app/assets/images/model 3', range: 354)
-create_car(description: 'became the first electric car to top the monthly new-car-sales ranking in any country in 2013', model: 'Model S', brand: 'Tesla', year: 2020, price: 125, user: user2, folder: 'app/assets/images/model s', range: 520)
+create_car(description: 'the first fully electric compact SUV in Europe', model: 'Kona Electric', brand: 'Hyundai', year:  2020, price:  100, user:  user1, folder: 'app/assets/images/kona', range: 484, address: addresses.sample)
+create_car(description: 'basically made of plastic', model: 'i3', brand: 'BMW', year: 2020, price: 100, user: user1, folder: 'app/assets/images/i3', range: 130, address: addresses.sample)
+create_car(description: 'actually a hybrid', model: 'i8', brand: 'BMW', year: 2020, price: 100, user: user3, folder: 'app/assets/images/i8', range: 37, address: addresses.sample)
+create_car(description: 'the first electric car from Jaguar', model: 'I-Pace', brand: 'Jaguar', year: 2020, price: 100, user: user2, folder: 'app/assets/images/i-pace', range: 430, address: addresses.sample)
+create_car(description: 'tech geek but also a family man', model: 'Model X', brand: 'Tesla', year: 2020, price: 100, user: user3, folder: 'app/assets/images/model x', range: 497, address: addresses.sample)
+create_car(description: 'you like living in the fast lane', model: 'Taycan', brand: 'Porsche', year: 2020, price: 100, user: user2, folder: 'app/assets/images/taycan', range: 400, address: addresses.sample)
+create_car(description: 'tech geeks first choice', model: 'Model 3', brand: 'Tesla', year: 2020, price: 100, user: user3, folder: 'app/assets/images/model 3', range: 354, address: addresses.sample)
+create_car(description: 'became the first electric car to top the monthly new-car-sales ranking in any country in 2013', model: 'Model S', brand: 'Tesla', year: 2020, price: 100, user: user2, folder: 'app/assets/images/model s', range: 520, address: addresses.sample)
+
 
 print 'seeding done successfully!'

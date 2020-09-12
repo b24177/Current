@@ -25,11 +25,17 @@ class CarsController < ApplicationController
   def show
     @car = Car.find(params[:id])
     @booking = Booking.new
+
+    @markers =
+      [{
+        lat: @car.latitude,
+        lng: @car.longitude
+      }]
   end
 
   private
 
   def car_params
-    params.require(:car).permit(:brand, :year, :model, :description, :price, :range, photos: [])
+    params.require(:car).permit(:brand, :year, :model, :description, :price, :range, :address, photos: [])
   end
 end
