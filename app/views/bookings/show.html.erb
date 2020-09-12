@@ -7,7 +7,7 @@
         <li style="list-style-type:none">Booked for: <%= @booking.start_date %> - <%= @booking.end_date %></li>
         <li style="list-style-type:none">Price: $<%= @booking.car.price %>/day</li>
       </ul>
-    <%= link_to 'Return to Dashboard', root_path, :class => "btn btn-primary" %>
+    <%= link_to 'Return to Dashboard', pages_dashboard_path, :class => "btn btn-primary" %>
     <%= link_to 'Book Another Car', cars_path, :class => "btn btn-primary" %>
   </div>
 </div>
