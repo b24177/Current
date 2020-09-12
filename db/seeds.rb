@@ -70,4 +70,5 @@ create_car(description: 'you like living in the fast lane', model: 'Taycan', bra
 create_car(description: 'tech geeks first choice', model: 'Model 3', brand: 'Tesla', year: 2020, price: 100, user: user3, folder: 'app/assets/images/model 3', range: 354, address: addresses.sample)
 create_car(description: 'became the first electric car to top the monthly new-car-sales ranking in any country in 2013', model: 'Model S', brand: 'Tesla', year: 2020, price: 100, user: user2, folder: 'app/assets/images/model s', range: 520, address: addresses.sample)
 
+
 print 'seeding done successfully!'

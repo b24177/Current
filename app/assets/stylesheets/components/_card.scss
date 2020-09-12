@@ -4,10 +4,15 @@
   margin: 8px;
 }
 
+.card-body p {
+  color: black;
+}
+
 .card-index {
   width: 30%;
   margin: 16px;
 }
+
 .card-img-top {
   width: 100%;
   height: 28vh;
@@ -21,4 +26,16 @@
 .card-banner {
   width: 90%;
   height: 600px;
+}
+
+/*home*/
+.card-home h1, p {
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/*dashboard*/
+.card-dashboard p {
+  color: black;
 }
