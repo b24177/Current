@@ -9,9 +9,15 @@
     </svg>
   </div>
     <p>Your source for renting and listing electric cars.</p>
-    <p>Log in or sign up to rent or list cars.</p>
-    <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
-    <%= link_to "Sign Up", user_session_url, class: "btn btn-primary" %>
+    <% if current_user %>
+      <p>Click below to start booking or listing cars now!</p>
+      <%= link_to "Book Car", cars_path, class: "btn btn-primary" %>
+      <%= link_to "List Car", new_car_path, class: "btn btn-primary" %>
+      <% else %>
+      <p>Log in or sign up to rent or list cars.</p>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
 </div>
