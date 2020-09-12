@@ -52,13 +52,14 @@ def create_car(attributes = {})
       year: attributes[:year],
       price: attributes[:price],
       range: attributes[:range],
+      address: attributes[:address],
       user: attributes[:user]
     })
   attach_photos(car, images)
   car.save
 end
 
-create_car(description: 'the first fully electric compact SUV in Europe', model: 'Kona Electric', brand: 'Hyundai', year:  2020, price:  100, user:  user1, folder: 'app/assets/images/kona', range: 484)
+create_car(description: 'the first fully electric compact SUV in Europe', model: 'Kona Electric', brand: 'Hyundai', year:  2020, price:  100, user:  user1, folder: 'app/assets/images/kona', range: 484, address: 'Dyegata 43, Sande 3070')
 # create_car('was the world\'s top selling electric car until 2020','Leaf', 'Nissan', 2020, 100, user2, 'app/assets/images/leaf.jpg', 'leaf.jpg')
 # create_car('an electric vehicle that won’t cost enthusiasts their souls','SE Electric Hardtop', 'Mini Cooper', 2020, 100, user3, 'app/assets/images/minicooperSE.jpg', 'minicooperSE.jpg')
 create_car(description: 'basically made of plastic', model: 'i3', brand: 'BMW', year: 2020, price: 100, user: user1, folder: 'app/assets/images/i3', range: 130)
