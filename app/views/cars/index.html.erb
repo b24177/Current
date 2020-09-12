@@ -7,7 +7,7 @@
         <%= cl_image_tag car.photos.first.key, class: "card-img-top" %>
       <% end %>
       <div class="card-body">
-        <p><strong><%= car.title %></strong></p>
+        <p class="index-title"><strong><%= car.title %></strong></p>
         <p>Year: <%= car.year %></p>
         <p>Price: $<%= car.price %>/day</p>
         <div class="text-center">
