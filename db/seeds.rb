@@ -32,7 +32,7 @@ user3 = User.create!({
   password_confirmation: 'something'
 })
 
-addresses = ['Dyegata 43, Sande 3070', 'Scweigaards gate 34, Oslo 0191', 'Langgaten 7, Holmestrand 3080', 'Frode Rinnans veg 2, Trondheim 7050']
+addresses = ['Dyegata 43, Sande 3070', 'Schweigaards gate 34, Oslo 0191', 'Langgaten 7, Holmestrand 3080', 'Frode Rinnans veg 2, Trondheim 7050']
 
 puts 'users created'
 
